@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRSS</title>
+</head>
+<body>
+  <script>
+    function startConversation() {
+      // Menampilkan pesan pertama
+      alert("Hai!");
+      askNext();
+    }
+
+    function askNext() {
+      // Menampilkan pertanyaan kedua
+      alert("Mau gak aku kasih tau sesuatu yang manis?");
+      getAnswer();
+    }
+
+    function getAnswer() {
+      // Memberikan pilihan jawaban
+      const answer = prompt("Cukup jawab 'y' atau 'n' di bawah ini:");
+      
+      if (answer === 'y' || answer === 'Y') {
+        alert("Efesus 1:16. Aku pun tidak berhenti mengucap syukur karena kamu.\nDan aku selalu mengingat kamu dalam doaku.");
+      } else if (answer === 'n' || answer === 'N') {
+        alert("Bodo amat, aku akan tetap kasih tau sesuatu yang manis.");
+        showGratitude();
+      } else {
+        alert("Jawaban tidak valid, coba lagi.");
+        getAnswer();
+      }
+    }
+
+    function showGratitude() {
+      // Menampilkan pesan terakhir setelah jawaban 'n'
+      alert("Efesus 1:16. Aku pun tidak berhenti mengucap syukur karena kamu.\nDan aku selalu mengingat kamu dalam doaku.");
+    }
+
+    // Memulai percakapan saat halaman dimuat
+    window.onload = startConversation;
+  </script>
+</body>
+</html>
